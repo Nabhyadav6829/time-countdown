@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #1a1a1a, #4a148c);
+    color: #fff;
+    animation: gradientShift 10s infinite alternate;
+}
+
+.full {
+    text-align: center;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 90%;
+    animation: fadeIn 1s ease-in;
+}
+
+.date-picker {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.date-input {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    width: 300px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    backdrop-filter: blur(5px);
+}
+
+.date-input:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.search-btn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background: #7c4dff;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-btn img {
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.counter div {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.counter div span:first-child {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #7c4dff;
+    text-shadow: 0 0 15px rgba(124, 77, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.counter div span:last-child {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ccc;
+}
+
+.ed {
+    margin: 2rem 0;
+}
+
+.dd {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(124, 77, 255, 0.5);
+}
+
+@keyframes numberPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .counter div {
+        width: 140px;
+        height: 140px;
+    }
+
+    .counter div span:first-child {
+        font-size: 2.5rem;
+    }
+
+    .dd {
+        font-size: 2rem;
+    }
+
+    .date-input {
+        width: 200px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter {
+        gap: 1rem;
+    }
+
+    .counter div {
+        width: 100px;
+        height: 100px;
+    }
+
+    .counter div span:first-child {
+        font-size: 1.8rem;
+    }
+
+    .counter div span:last-child {
+        font-size: 0.8rem;
+    }
+
+    .dd {
+        font-size: 1.5rem;
+    }
+}
